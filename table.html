@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Student Data</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Joining Date</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="studentTableBody">
+            <!-- Data will be dynamically inserted here -->
+        </tbody>
+    </table>
+    // Fetch data from localStorage or mock API and display in table
+    document.addEventListener('DOMContentLoaded', function() {
+        let studentData = JSON.parse(localStorage.getItem('studentData')) || [];
+        
+        const tableBody = document.getElementById('studentTableBody');
+        studentData.forEach(student => {
+            const row = `
+                <tr>
+                    <td>${student.ID}</td>
+                    <td>${student.name}</td>
+                    <td>${student.DOB}</td>
+                    <td>${student.gender}</td>
+                    <td>${student.department}</td>
+                    <td>${student.joiningDate}</td>
+                    <td>${student.email}</td>
+                    <td>${student.age}</td>
+                </tr>
+            `;
+            tableBody.innerHTML += row;
+        });
+    });
+    <script defer src="table.js"></script>
+</body>
+</html>

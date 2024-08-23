@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,4 +60,123 @@
        
     </form>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js crud api</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form action="" id="form">
+      <h1 class="head">Register Form</h1>
+      <div class="container-one">
+        <div>
+          <label for="">Name:</label>
+          <div class="div1">
+            <input type="text" id="name" placeholder="Name..." />
+            <p id="nameError"></p>
+          </div>
+        </div>
+
+        <div>
+          <label for="">Email:</label>
+          <div class="div1">
+            <input type="" id="email" placeholder="Email..." />
+            <p id="emailError"></p>
+          </div>
+        </div>
+
+        <div>
+          <label for="">Phone Number:</label>
+          <div class="div1">
+            <input type="tel" id="phonenumber" placeholder="Phone Number..." />
+            <p id="numberError"></p>
+          </div>
+        </div>
+        <div>
+          <label for="">Language:</label>
+          <div class="div1">
+            <input list="lang" id="Languages" placeholder="Language..." />
+            <datalist id="lang">
+              <option value="Tamil"></option>
+              <option value="English"></option>
+              <option value="Hindi"></option>
+              <option value="Malayalam"></option>
+              <option value="Telugu"></option>
+            </datalist>
+
+            <p id="langError"></p>
+          </div>
+        </div>
+
+        <div>
+          <label for="">Date Of Birth:</label>
+          <div class="div1">
+            <input type="date" id="date" />
+            <p id="dobError"></p>
+          </div>
+        </div>
+
+        <div>
+          <label for="">Gender:</label>
+          <div class="div1 ggg">
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="Gender"
+                  id="genderMale"
+                  value="Male"
+                /> Male
+              </label>
+
+              <label
+                ><input
+                  type="radio"
+                  name="Gender"
+                  id="genderFemale"
+                  value="Female"
+              /> Female</label>
+            </div>
+            <p id="genderError"></p>
+          </div>
+        </div>
+
+        <div>
+          <label for="">Password:</label>
+          <div class="div1">
+            <input type="password" id="password" placeholder="Password..." />
+            <p id="passwordError"></p>
+          </div>
+        </div>
+
+        <div>
+          <label for="">Confirm Password:</label>
+          <div class="div1">
+            <input
+              type="password"
+              id="cpassword"
+              placeholder="Confirm Password..."
+            />
+            <p id="conpassword"></p>
+          </div>
+        </div>
+      </div>
+      <div>
+       <div>
+        <label for="">Status<span>*</span></label>
+       </div>
+        <input type="checkbox" id="Status" >
+      </div>
+
+      <div class="submit">
+        <button class="submit-btn" onclick="validation(event) ">Submit</button>
+      </div>
+    </form>
+    <script src="index.js"></script>
+  </body>
 </html>
